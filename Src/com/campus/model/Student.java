@@ -1,4 +1,4 @@
-package Com.Campus.model;
+package com.campus.model;
 public class Student {
     //Encapsulation-data hiding
     //instance variables

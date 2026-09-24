@@ -1,6 +1,6 @@
-package Com.Campus.service;
+package com.campus.service;
 
-import Com.Campus.model.Student;
+import com.campus.model.Student;
 
 public class StudentService {
     // calculate total marks
@@ -91,7 +91,7 @@ public class StudentService {
         }
     }
     //display report card
-    public void displayStudentDetails(Student student) {
+    public void displayReportCard(Student student) {
         System.out.println("Student ID: " + student.getStudentid());
         System.out.println("Student Name: " + student.getStudentname());
         System.out.println("Department: " + student.getDepartment());
