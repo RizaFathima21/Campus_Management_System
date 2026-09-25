@@ -1,5 +1,5 @@
 package com.campus.model;
-public class Student {
+public abstract class Student {
     //Encapsulation-data hiding
     //instance variables
     private int studentid;
@@ -73,6 +73,9 @@ public class Student {
 
         }
     }
+    //abstract method
+    public abstract void studentType();
+
     //static method-belongs to class,not to object
     public static void displayStudentCount() {
         System.out.println("Total Students:"+studentCount);
