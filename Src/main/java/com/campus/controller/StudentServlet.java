@@ -6,10 +6,29 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import com.campus.service.StudentService;
 
-@webServlet("/student")
-public class StudentServlet extends HttpServlet 
+@WebServlet("/student")
+public class StudentServlet extends HttpServlet {
 
+private final StudentService studentService = new StudentService();
 
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {HttpServletResponse response) throws IOException, ServletExpection {
+        var students = studentService.getstudents();
+        request.setAttribute("students", students);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("students.jsp");
+        dispatcher.forward(request, response);
+    }
+    }
+        
+    @Override 
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String name = request.getParameter("name");
+        String course = request.getParameter("course");
+        studentService.addStudent(name, course);
+        response.sendRedirect("students");
+    }
+}
 
 
