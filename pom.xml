@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -41,11 +41,12 @@
             <scope>provided</scope>
 
         </dependency>
-        <!-- postgresql jdbc driver  -->
+
+        <!-- postgresql jdbc driver -->
         <dependency>
-             <groupId>org.postgresql</groupId>
-             <artifactId>postgresql</artifactId>
-             <version>42.7.8</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.8</version>
         </dependency>
 
     </dependencies>
@@ -84,6 +85,7 @@
                 <artifactId>jetty-ee10-maven-plugin</artifactId>
                 <version>12.0.14</version>
                 <configuration>
+                    <scan>1</scan>
                     <httpConnector>
                         <port>8080</port>
                     </httpConnector>
